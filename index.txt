@@ -1,0 +1,10 @@
+http://localhost:2400/product/filter?Brand=${brand}
+   console.log(req.query.Brand);
+app.use('/product',productController); //product/:cat for the catogery of the product
+
+
+   router.get('/filter', async (req,res)=>{
+    const prod= await product.find({Brand:req.query.Brand}).lean().exec();
+    console.log(req.query.Brand);
+    return res.send(prod);
+})

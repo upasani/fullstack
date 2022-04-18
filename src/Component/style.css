@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    border: 1px solid black;
+    width:85%;
+    margin: auto;
+    /* height: 350px; */
+    gap: 15px;
+    padding: 10px;
+}
+.container>div{
+    border:1px solid red;
+    width: 25%;
+}
+.sidebar>div{
+    border: 1px solid black;
+}
+/* //This is for the login part */
+#log-contain{
+    border: 1px solid black;
+    width: 20%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+#log-contain>input{
+    width: 200px;
+    height: 28px;
+    border-radius: 10px;
+    margin: 13px;
+}
+#log-contain>button{
+    border: 1px solid black;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    margin: 17px;
+}
+#link{
+    border: 1px solid black;
+    text-decoration: none;
+    width: 15%;
+    padding:8px;
+    margin: auto;
+    margin-bottom: 25px;
+    
+}
+td,th{
+    border: 1px solid black;
+}
+table{
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 25%;
+}
+#sort-age{
+    /* border: 1px solid black; */
+    width:30%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+#sort-age>button{
+    /* border: 1px solid red; */
+    width: 25%;
+    margin: 10px;
+    height:35px;
+    border-radius: 10px;
+}
+/* //for the pagination part */
+#pagi{
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+}
