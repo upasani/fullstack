@@ -14,11 +14,12 @@ export const Home = () => {
     // console.log(state);
     const [teachData, setData] = useState([]);
     const [sort, getSort] = useState("");
+    const [page,setPage]=useState(1);
     console.log(sort);
 
 
     const getData = () => {
-        fetch(`http://localhost:8080/get-teacher/sorting?srt=${sort}`)
+        fetch(`http://localhost:8080/get-teacher/sorting?srt=${sort}&page=${page}`)
             .then((res) => res.json())
             .then((res) => setData(res))
             .catch((err) => console.log(err));
@@ -27,30 +28,19 @@ export const Home = () => {
     useEffect(() => {
         getData();
 
-    }, [sort])
-    const btns = (cb) => {
-        return cb();
-
-    }
-
+    }, [sort,page])
+   
+    console.log(page)
     return (
         <>
 
             <div id='pagi'>
-                {
-                    btns(() => {
-                        for (let i = 0; i < 4; i++) {
-                            <>
-                            <h2>i</h2>
-                            </>
-                        }
-                    })
-
-
-                }
-                
-
-
+               <button onClick={()=>setPage(1)}>1</button>
+               <button onClick={()=>setPage(2)}>2</button>
+               <button onClick={()=>setPage(3)}>3</button>
+               <button onClick={()=>setPage(4)}>4</button>
+               <button onClick={()=>setPage(5)}>5</button>
+               
             </div>
             <div>
                 <table>
