@@ -5,8 +5,9 @@ const app=express();
 const router=express.Router();
 
 router.get('/sorting',async(req,res)=>{
-    const Teacher= await teacher.find().lean().exec();
-    // console.log("In the teacher",req.query.srt);
+    let page=req.query.page;
+    const Teacher= await teacher.find().skip((page-1)*5).limit(5).lean().exec();
+    console.log("In the teacher",req.query);
     let result=req.query.srt;
     if(result=='asc'){
         Teacher.sort((a,b)=>{
